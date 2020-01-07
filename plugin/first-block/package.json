@@ -1,0 +1,23 @@
+{
+  "name": "first-block",
+  "version": "1.0.22",
+  "description": "First Block",
+  "main": "dist/first-block.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/first-block.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^1.0.11"
+  },
+  "license": "MIT"
+}

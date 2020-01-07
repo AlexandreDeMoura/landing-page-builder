@@ -1,0 +1,16 @@
+{
+  "name": "germinobuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre De Moura",
+  "license": "ISC",
+  "dependencies": {
+    "first-block": "file:plugin/first-block",
+    "grapejs-carousel": "file:plugin/grapejs-carousel",
+    "grapesjs-blocks-basic": "^0.1.8"
+  }
+}

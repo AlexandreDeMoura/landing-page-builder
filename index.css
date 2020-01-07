@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: inherit;
+}
+
+html {
+box-sizing: border-box;
+}
+
+body {
+font-family: sans-serif;
+-webkit-font-smoothing: sans-serif;
+-moz-osx-font-smoothing: sans-serif;
+font-weight: 500;
+line-height: 1.6;
+}
+
+.panel-left {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  padding-top: 5vh !important;
+
+  background-color: #444444;
+
+  overflow: scroll;
+}
+
+.panel-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+  background-color: #444444;
+}
+
+.panel-top__project-actions {
+  display: flex;
+  justify-content: flex-start !important;  
+}
+
+.panel-right {
+  max-height: 100vh;
+  padding-top: 5vh;
+
+  background-color: #444444;
+
+  overflow: scroll;
+}
+
+.layers-container {
+  margin-bottom: 30px;
+}
