@@ -3,30 +3,30 @@ export default (editor, opt = {}) => {
   const bm = editor.BlockManager;
 
   bm.add("CAROUSEL", {
-    label: 'carousel',
-    category: 'carousel',
-    content:`
+    label: 'Carousel',
+    category: 'Generic',
+    content: `
     <div class="slider">
       <div  class="slider__main-content" data-gjs-type="CAROUSEL">
         <div class="slide">
           <h2>They trust us 1</h2>
           <div class="text">When you are a lover of astronomy, the confusion between astronomy and astrology.</div>
-          <img src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
+          <img class="slider__img" src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
         </div>
         <div class="slide">
           <h2>They trust us 2</h2>
           <div class="text">When you are a lover of astronomy, the confusion     between astronomy and astrology.</div>
-          <img src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
+          <img class="slider__img" src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
         </div>
         <div class="slide">
           <h2>They trust us 3</h2>
           <div class="text">When you are a lover of astronomy, the confusion     between astronomy and astrology.</div>
-          <img src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
+          <img class="slider__img" src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
         </div>
         <div class="slide">
           <h2>They trust us 4</h2>
           <div class="text">When you are a lover of astronomy, the confusion     between astronomy and astrology.</div>
-          <img src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
+          <img class="slider__img" src="https://www.protecvie.fr/wp-content/uploads/2016/07/personne-agee-heureuse.jpg"/>
         </div>
       </div>
     </div>
@@ -40,7 +40,6 @@ export default (editor, opt = {}) => {
 
       html {
       box-sizing: border-box;
-      font-size: calc(0.6em + 1.05vw);
       }
 
       body {
@@ -90,7 +89,7 @@ export default (editor, opt = {}) => {
         line-height: 31px;
       }
 
-      img {
+      .slider__img {
         margin: 0 auto 30px auto;
         width: 35px;
         height: 35px;
@@ -101,5 +100,14 @@ export default (editor, opt = {}) => {
         font-size: 30px;
       }
     </style>`,
+  });
+
+  bm.add("DIV BLOCK", {
+    label: 'Div Block',
+    category: 'Basic',
+    attributes: {
+      class: 'gjs-fonts gjs-f-b1'
+    },
+    content: `<div></div>`,
   });
 }

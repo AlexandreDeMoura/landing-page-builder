@@ -118,41 +118,6 @@ export default function (editor, opt = {}) {
   const attrsRow = attrsToString(rowAttr);
   const attrsCell = attrsToString(colAttr);
 
-  toAdd('column1') && bm.add('column1', {
-    label: c.labelColumn1,
-    category: c.category,
-    attributes: {
-      class: 'gjs-fonts gjs-f-b1'
-    },
-    content: `<div ${attrsRow}>
-        <div ${attrsCell}></div>
-      </div>
-      ${ basicStyle ?
-        `<style>
-          ${styleRow}
-          ${styleClm}
-        </style>`
-        : ''}`
-  });
-
-  toAdd('column2') && bm.add('column2', {
-    label: c.labelColumn2,
-    attributes: {
-      class: 'gjs-fonts gjs-f-b2'
-    },
-    category: c.category,
-    content: `<div ${attrsRow}>
-        <div ${attrsCell}></div>
-        <div ${attrsCell}></div>
-      </div>
-      ${ basicStyle ?
-        `<style>
-          ${styleRow}
-          ${styleClm}
-        </style>`
-        : ''}`
-  });
-
   toAdd('text') && bm.add('text', {
     label: c.labelText,
     category: c.category,

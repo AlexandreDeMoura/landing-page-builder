@@ -8,7 +8,7 @@ const editor = grapesjs.init({
     ],
     styles: [
       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",
-       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
     ]
   },
   plugins: ['gjs-blocks-basic', 'first-block', 'grapesjs-carousel'],
@@ -18,8 +18,8 @@ const editor = grapesjs.init({
   // Size of the editor
   height: '100%',
   width: '100%',
- 
- storageManager: {
+
+  storageManager: {
     type: 'remote',
     stepsBeforeSave: 3,
     urlStore: 'http://localhost:5555/save/123',
@@ -31,17 +31,17 @@ const editor = grapesjs.init({
   },
   deviceManager: {
     devices: [{
-        name: 'Desktop',
-        width: '', // default size
-      },{
-        name: 'Tablet',
-        className: 'fa fa-desktop',
-        width: '768px',
-        widthMedia: '768px',
-      }, {
-        name: 'Mobile',
-        width: '375px', // this value will be used on canvas width
-        widthMedia: '480px', // this value will be used in CSS @media
+      name: 'Desktop',
+      width: '', // default size
+    }, {
+      name: 'Tablet',
+      className: 'fa fa-desktop',
+      width: '768px',
+      widthMedia: '768px',
+    }, {
+      name: 'Mobile',
+      width: '375px', // this value will be used on canvas width
+      widthMedia: '480px', // this value will be used in CSS @media
     }]
   },
 
@@ -50,76 +50,263 @@ const editor = grapesjs.init({
   },
   // We define a default panel as a sidebar to contain layers
   panels: {
-    defaults: [
-      {
-      id: 'layers',
-      el: '.panel-left',
-      // Make the panel resizable
-      resizable: {
-        maxDim: 350,
-        minDim: 200,
-        tc: 0, // Top handler
-        cl: 1, // Left handler
-        cr: 0, // Right handler
-        bc: 0, // Bottom handler
-        // Being a flex child we need to change `flex-basis` property
-        // instead of the `width` (default)
-        keyWidth: 'flex-basis',
+    defaults: [{
+        id: 'layers',
+        el: '.panel-left',
+        // Make the panel resizable
+        resizable: {
+          maxDim: 350,
+          minDim: 200,
+          tc: 0, // Top handler
+          cl: 1, // Left handler
+          cr: 0, // Right handler
+          bc: 0, // Bottom handler
+          // Being a flex child we need to change `flex-basis` property
+          // instead of the `width` (default)
+          keyWidth: 'flex-basis',
+        },
       },
-    },
-    {
-      id: 'panel-devices',
-      el: '.panel-top__project-devices',
-      buttons: [{
+      {
+        id: 'panel-devices',
+        el: '.panel-top__project-devices',
+        buttons: [{
           id: 'device-desktop',
           className: 'fa fa-desktop',
           command: 'set-device-desktop',
           active: true,
           togglable: false,
-        },{ 
+        }, {
           id: 'device-tablet',
           className: 'fa fa-tablet',
           command: 'set-device-tablet',
           togglable: false,
-        },{
+        }, {
           id: 'device-mobile',
           className: 'fa fa-mobile',
           command: 'set-device-mobile',
           togglable: false,
-      }],
-    }
-  ]
-},
+        }],
+      }
+    ]
+  },
 
 
-traitManager: {
-  appendTo: '.traits-container',
-},
-selectorManager: {
-  appendTo: '.selectors-container'
-},
-styleManager: {
-  appendTo: '.styles-container',
-  sectors: [{
+  traitManager: {
+    appendTo: '.traits-container',
+  },
+  selectorManager: {
+    appendTo: '.selectors-container'
+  },
+  styleManager: {
+    appendTo: '.styles-container',
+    sectors: [{
       name: 'Dimension',
       open: false,
       // Use built-in properties
-      buildProps: [ 'display', 'width', 'height', 'min-width', 'min-height', 
-      'max-width', 'max-height', 'padding', 'margin'],
+      buildProps: ['display', 'width', 'height', 'min-width', 'min-height',
+        'max-width', 'max-height', 'padding', 'margin'
+      ],
     }, {
       name: 'Typography',
       open: false,
-      buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height'
-      , 'text-align']
+      buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align']
     }, {
       name: "Flexbox",
       open: false,
-      buildProps: ['flex-direction', 'flex-wrap', 'justify-content', 'align-items', 'align-content'
-      , 'align-self', 'flex-basis', 'flex-grow', 'flex-shrink']
+      buildProps: ['flex-direction', 'flex-wrap', 'justify-content', 'align-items', 'align-content', 'align-self', 'flex-basis', 'flex-grow', 'flex-shrink']
     }, {
       name: 'Border',
       open: false,
-      buildProps: ['border', 'border-radius']
+      buildProps: ['border', 'border-radius'],
+      properties: [{
+          name: 'Border right',
+          property: 'border-right',
+          type: 'composite',
+          properties: [{
+            name: 'Width',
+            type: 'integer',
+            units: ['px', 'em', 'rem'],
+            property: 'border-right-width',
+          }, {
+            name: 'Style',
+            type: 'select',
+            property: 'border-right-style',
+            options: [{
+                value: 'none'
+              },
+              {
+                value: 'solid'
+              },
+              {
+                value: 'dotted'
+              },
+              {
+                value: 'dashed'
+              },
+              {
+                value: 'double'
+              },
+              {
+                value: 'groove'
+              },
+              {
+                value: 'ridge'
+              },
+              {
+                value: 'inset'
+              },
+              {
+                value: 'outset'
+              }
+            ]
+          }, {
+            name: 'Color',
+            type: 'color',
+            property: 'border-left-color',
+          }]
+        },
+        {
+          name: 'Border left',
+          property: 'border-left',
+          type: 'composite',
+          properties: [{
+            name: 'Width',
+            type: 'integer',
+            units: ['px', 'em', 'rem'],
+            property: 'border-left-width',
+          }, {
+            name: 'Style',
+            type: 'select',
+            property: 'border-left-style',
+            options: [{
+                value: 'none'
+              },
+              {
+                value: 'solid'
+              },
+              {
+                value: 'dotted'
+              },
+              {
+                value: 'dashed'
+              },
+              {
+                value: 'double'
+              },
+              {
+                value: 'groove'
+              },
+              {
+                value: 'ridge'
+              },
+              {
+                value: 'inset'
+              },
+              {
+                value: 'outset'
+              }
+            ]
+          }, {
+            name: 'Color',
+            type: 'color',
+            property: 'border-left-color',
+          }]
+        },
+        {
+          name: 'Border bottom',
+          property: 'border-bottom',
+          type: 'composite',
+          properties: [{
+            name: 'Width',
+            type: 'integer',
+            units: ['px', 'em', 'rem'],
+            property: 'border-bottom-width',
+          }, {
+            name: 'Style',
+            type: 'select',
+            property: 'border-bottom-style',
+            options: [{
+                value: 'none'
+              },
+              {
+                value: 'solid'
+              },
+              {
+                value: 'dotted'
+              },
+              {
+                value: 'dashed'
+              },
+              {
+                value: 'double'
+              },
+              {
+                value: 'groove'
+              },
+              {
+                value: 'ridge'
+              },
+              {
+                value: 'inset'
+              },
+              {
+                value: 'outset'
+              }
+            ]
+          }, {
+            name: 'Color',
+            type: 'color',
+            property: 'border-bottom-color',
+          }]
+        },
+        {
+          name: 'Border top',
+          property: 'border-top',
+          type: 'composite',
+          properties: [{
+            name: 'Width',
+            type: 'integer',
+            units: ['px', 'em', 'rem'],
+            property: 'border-top-width',
+          }, {
+            name: 'Style',
+            type: 'select',
+            property: 'border-top-style',
+            options: [{
+                value: 'none'
+              },
+              {
+                value: 'solid'
+              },
+              {
+                value: 'dotted'
+              },
+              {
+                value: 'dashed'
+              },
+              {
+                value: 'double'
+              },
+              {
+                value: 'groove'
+              },
+              {
+                value: 'ridge'
+              },
+              {
+                value: 'inset'
+              },
+              {
+                value: 'outset'
+              }
+            ]
+          }, {
+            name: 'Color',
+            type: 'color',
+            property: 'border-top-color',
+          }]
+        }
+      ]
     }, {
       name: 'Background',
       open: false,
@@ -141,8 +328,6 @@ styleManager: {
   },
 });
 
-
-
 editor.Panels.addPanel({
   id: 'panel-top',
   el: '.panel-top',
@@ -150,8 +335,7 @@ editor.Panels.addPanel({
 editor.Panels.addPanel({
   id: 'project-actions',
   el: '.panel-top__project-actions',
-  buttons: [
-    {
+  buttons: [{
       id: 'visibility',
       active: true, // active by default
       className: 'btn-toggle-borders fa fa-square-o',
@@ -199,11 +383,8 @@ editor.Commands.add('set-device-mobile', {
   run: editor => editor.setDevice('Mobile')
 });
 
-const blockManager = editor.BlockManager;
+/*const blockManager = editor.BlockManager;
 blockManager.add('my-first-block', {
   label: 'Simple block',
   content: '<div class="my-block">This is a simple block</div>',
-});
-
-
-
+});*/
