@@ -26,6 +26,113 @@ export default (editor, opt = {}) => {
   bm.add("NavBar", {
     label: 'NavBar',
     category: 'Header',
-    content: `<div data-gjs-type="NavBar" id="i9zk"> <div id="imgg"> <img id="ibt6" src="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;fill: rgba(0,0,0,0.15); transform: scale(0.75)&quot;> <path d=&quot;M8.5 13.5l2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2z&quot;></path> </svg>" /> <img class="navigation-hamburger" id="iou3q" src="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;fill: rgba(0,0,0,0.15); transform: scale(0.75)&quot;> <path d=&quot;M8.5 13.5l2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2z&quot;></path> </svg>" /> <div class="navigation-menu" id="i0sr"> <a class="navigation-link" id="ipw1">Menu 1</a> <a class="navigation-link">Menu 2</a> <a class="navigation-link">Menu 3</a> <a class="navigation-link">Menu 4</a> <a class="navigation-link">Menu 5</a> <a class="navigation-link">Menu 6</a> <a class="secondary-cta" id="ibuvy">Action</a> </div> </div> <div id="itmus"> <div class="navigation-menu navigation-menu--alternative"> <a class="navigation-link">Menu 1</a> <a class="navigation-link">Menu 2</a> <a class="navigation-link">Menu 3</a> <a class="navigation-link">Menu 4</a> <a class="navigation-link">Menu 5</a> <a class="navigation-link">Menu 6</a> <a class="secondary-cta">Action</a> </div> </div> </div> <style> * { box-sizing: border-box; } body { margin: 0; } #i9zk { display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: column; } #imgg { max-width: 1400px; width: 100%; display: flex; justify-content: space-between; align-items: center; } #ibt6 { color: black; } .navigation-link { font-size: 21px; margin: 0 55px 0 0; } .navigation-menu { display: flex; align-items: center; } .secondary-cta { font-size: 19px; background-color: #0065F2; color: #ffffff; padding: 12px 40px 12px 40px; } #iou3q { color: black; display: none; } .navigation-menu.navigation-menu--alternative { display: none; } #itmus { width: 100%; } @media (max-width: 768px) { .navigation-menu { display: none; } #iou3q { display: block; } } </style>`,
+    content: `<div id="i9zk"> 
+    <div id="imgg"> 
+      <img id="ibt6" src="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;fill: rgba(0,0,0,0.15); transform: scale(0.75)&quot;> <path d=&quot;M8.5 13.5l2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2z&quot;></path> </svg>"/> 
+      <img id="iou3q" src="<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;fill: rgba(0,0,0,0.15); transform: scale(0.75)&quot;> <path d=&quot;M8.5 13.5l2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2z&quot;></path> </svg>" class="navigation-hamburger"/> 
+      <div id="i0sr" class="navigation-menu"> 
+        <a id="ipw1" class="navigation-link">Menu 1</a> 
+        <a class="navigation-link">Menu 2</a> 
+        <a class="navigation-link">Menu 3</a> 
+        <a class="navigation-link">Menu 4</a> 
+        <a class="navigation-link">Menu 5</a> 
+        <a class="navigation-link">Menu 6</a> 
+        <a id="ibuvy" class="secondary-cta">Action</a> 
+      </div> 
+    </div> 
+    <div id="itmus"> 
+      <div class="navigation-menu navigation-menu--alternative"> 
+        <a class="navigation-link">Menu 1</a> 
+        <a class="navigation-link">Menu 2</a> 
+        <a class="navigation-link">Menu 3</a> 
+        <a class="navigation-link">Menu 4</a> 
+        <a class="navigation-link">Menu 5</a> 
+        <a class="navigation-link">Menu 6</a> 
+        <a class="secondary-cta">Action</a> 
+      </div> 
+    </div> 
+  </div> 
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  *{
+    box-sizing:border-box;
+  }
+  body{
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+  }
+  #i9zk{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    flex-direction:column;
+  }
+  #imgg{
+    max-width:1400px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  #ibt6{
+    color:black;
+  }
+  .navigation-link{
+    font-size:21px;
+    margin-top:0px;
+    margin-right:55px;
+    margin-bottom:0px;
+    margin-left:0px;
+  }
+  .navigation-menu{
+    display:flex;
+    align-items:center;
+  }
+  .secondary-cta{
+    font-size:19px;
+    background-color:rgb(0, 101, 242);
+    color:rgb(255, 255, 255);
+    padding-top:12px;
+    padding-right:40px;
+    padding-bottom:12px;
+    padding-left:40px;
+  }
+  #iou3q{
+    color:black;
+    display:none;
+  }
+  .navigation-menu.navigation-menu--alternative{
+    display:none;
+  }
+  #itmus{
+    width:100%;
+  }
+  @media (max-width: 768px){
+    .navigation-menu{
+      display:none;
+    }
+    #iou3q{
+      display:block;
+    }
+  }
+  @media (max-width: 480px){
+    .navigation-menu.navigation-menu--alternative{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+    .navigation-link{
+      margin:0 55px 15px 0;
+    }
+  }  
+  </style>
+  `,
   });
 }
