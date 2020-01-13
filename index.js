@@ -8,7 +8,8 @@ const editor = grapesjs.init({
     ],
     styles: [
       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",
-      "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css",
+      "https://fonts.googleapis.com/css?family=Anton&display=swap"
     ]
   },
   plugins: ['gjs-blocks-basic', 'first-block', 'grapesjs-carousel'],
