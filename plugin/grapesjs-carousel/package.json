@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-carousel",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Simple navbar component for GrapesJS editor",
   "main": "dist/grapesjs-carousel.min.js",
   "scripts": {

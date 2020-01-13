@@ -110,4 +110,11 @@ export default (editor, opt = {}) => {
     },
     content: `<div></div>`,
   });
+
+  bm.add("LINK IMG", {
+    label: 'Link Image',
+    category: 'Basic',
+    content: `<a class="link-img"><img class="link-img__img"/></a>`,
+  });
+
 }

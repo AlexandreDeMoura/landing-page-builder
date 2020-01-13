@@ -147,12 +147,6 @@ export default function (editor, opt = {}) {
     },
   });
 
-  toAdd('link-img') && bm.add('link-img', {
-    label: 'link img',
-    category: c.category,
-    content: `<a class="link-img"><img class="link-img__img"/></a>`
-  });
-
   toAdd('image') && bm.add('image', {
     label: c.labelImage,
     category: c.category,
