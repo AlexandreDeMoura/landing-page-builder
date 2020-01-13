@@ -116,5 +116,4 @@ export default (editor, opt = {}) => {
     category: 'Basic',
     content: `<a class="link-img"><img class="link-img__img"/></a>`,
   });
-
 }
