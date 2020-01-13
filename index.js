@@ -110,7 +110,15 @@ const editor = grapesjs.init({
     }, {
       name: 'Typography',
       open: false,
-      buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align']
+      buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align'],
+      properties: [{
+        property: 'font-family',
+        name: 'Font',
+        list: [{
+          name: 'Anton',
+          value: 'Anton'
+        }]
+      }, ]
     }, {
       name: "Flexbox",
       open: false,
