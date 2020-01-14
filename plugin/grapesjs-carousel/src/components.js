@@ -53,6 +53,8 @@ export default (editor, opt = {}) => {
           let mobileNavMenu = document.getElementsByClassName("navigation-menu--alternative")[0];
           let hamburger = document.getElementsByClassName("navigation-hamburger")[0];
 
+          mobileNavMenu.style.display = "none";
+
           function handleClick() {
             if (mobileNavMenu.style.display === "none") {
               mobileNavMenu.style.display = "flex";
