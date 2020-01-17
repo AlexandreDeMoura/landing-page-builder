@@ -1,3 +1,6 @@
+const url = new URL(window.location.href);
+const id = url.searchParams.get("id");
+
 const editor = grapesjs.init({
   // Indicate where to init the editor. You can also pass an HTMLElement
   container: '#editor',
@@ -9,7 +12,11 @@ const editor = grapesjs.init({
     styles: [
       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",
       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css",
-      "https://fonts.googleapis.com/css?family=Anton&display=swap"
+      "https://fonts.googleapis.com/css?family=Anton&display=swap",
+      "https://fonts.googleapis.com/css?family=Neuton&display=swap",
+      "https://fonts.googleapis.com/css?family=Montserrat&display=swap",
+      "//db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular",
+      "https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap"
     ]
   },
   plugins: ['gjs-blocks-basic', 'first-block', 'grapesjs-carousel'],
@@ -23,8 +30,8 @@ const editor = grapesjs.init({
   storageManager: {
     type: 'remote',
     stepsBeforeSave: 3,
-    urlStore: 'http://localhost:5555/save/123',
-    urlLoad: 'http://localhost:5555/get/123',
+    urlStore: `http://localhost:5555/save/${id}`,
+    urlLoad: `http://localhost:5555/get/${id}`,
   },
 
   blockManager: {
@@ -117,6 +124,18 @@ const editor = grapesjs.init({
         list: [{
           name: 'Anton',
           value: 'Anton'
+        }, {
+          name: 'Montserrat',
+          value: 'Montserrat'
+        }, {
+          name: 'Neuton',
+          value: 'Neuton'
+        }, {
+          name: 'BlogScriptW00-Regular',
+          value: 'BlogScriptW00-Regular'
+        }, {
+          name: 'Work Sans',
+          value: 'Work Sans'
         }]
       }, ]
     }, {
