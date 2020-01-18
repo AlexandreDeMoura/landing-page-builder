@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "first-block": "file:plugin/first-block",
-    "grapejs-carousel": "file:plugin/grapejs-carousel",
+    "grapesjs-carousel": "file:plugin/grapesjs-carousel",
     "grapesjs-blocks-basic": "^0.1.8"
   }
 }
