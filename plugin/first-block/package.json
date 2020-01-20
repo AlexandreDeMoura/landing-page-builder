@@ -1,6 +1,6 @@
 {
   "name": "first-block",
-  "version": "1.0.46",
+  "version": "1.0.51",
   "description": "First Block",
   "main": "dist/first-block.min.js",
   "repository": {
