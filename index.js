@@ -31,8 +31,8 @@ const editor = grapesjs.init({
   storageManager: {
     type: 'remote',
     stepsBeforeSave: 3,
-    urlStore: `http://10.132.0.2:80/save/${id}`,
-    urlLoad: `http://10.132.0.2:80/get/${id}`,
+    urlStore: `http://34.76.112.226/save/${id}`,
+    urlLoad: `http://34.76.112.226/get/${id}`,
   },
 
   blockManager: {
