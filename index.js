@@ -17,7 +17,9 @@ const editor = grapesjs.init({
       "https://fonts.googleapis.com/css?family=Montserrat&display=swap",
       "//db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular",
       "https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap",
-      "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"
+      "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap",
+      "https://fonts.googleapis.com/css?family=Paytone+One&display=swap",
+      "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
     ]
   },
   plugins: ['gjs-blocks-basic', 'first-block', 'grapesjs-carousel'],
@@ -140,6 +142,12 @@ const editor = grapesjs.init({
         }, {
           name: 'Poppins',
           value: 'Poppins'
+        }, {
+          name: 'Paytone One',
+          value: 'Paytone One'
+        }, {
+          name: 'Roboto',
+          value: 'Roboto'
         }]
       }, ]
     }, {
