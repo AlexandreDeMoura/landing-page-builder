@@ -15,7 +15,7 @@ const editor = grapesjs.init({
       "https://fonts.googleapis.com/css?family=Anton&display=swap",
       "https://fonts.googleapis.com/css?family=Neuton&display=swap",
       "https://fonts.googleapis.com/css?family=Montserrat&display=swap",
-      "//db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular",
+      "https://db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular",
       "https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap",
       "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap",
       "https://fonts.googleapis.com/css?family=Paytone+One&display=swap",
