@@ -33,8 +33,8 @@ const editor = grapesjs.init({
   storageManager: {
     type: 'remote',
     stepsBeforeSave: 3,
-    urlStore: `http://34.76.112.226/save/${id}`,
-    urlLoad: `http://34.76.112.226/get/${id}`,
+    urlStore: `https://api.lp.germinal.io/save/${id}`,
+    urlLoad: `https://api.lp.germinal.io/get/${id}`,
   },
 
   blockManager: {
